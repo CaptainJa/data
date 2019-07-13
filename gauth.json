@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "gcloud-nlp-runner-233703",
+  "private_key_id": "8663b2aed58efa01cdc370496644abd86e90cee3",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQC76sagX7mWtrW1\nPEeP2hkxn6SrcuV52dovRBTLAaV9NOHLY5YNtSfge/aUYfkMyRBpYs5K0ienwRqe\nXo95hArgwHVraD/Gc01kid+vGdExkTFjjTsUuzJT3njcRUaabhtS8q5FbnuW34eq\nl302BmA1sZ3SLw4Jqad+ej7DwUo0wi3WPX4klq4oRjDWJLTOThwVJWCDLvRNsIl9\nvIa2/hdgOfOcUv1NHKmuO6WtkTSm6+LeUzYrTXCDZETnA8uJofMHuuja+vHxzK3b\nHscqzVXU1Yr1+nmiBuPSeAWaNt7nBztqyIQV+ky90oA/YAaU472VY+21sfpVRnvU\nTu+nkYIDAgMBAAECggEAP0GnvSKcCaTVg/2XpU/ofTDdMK2Lm7n+3TxQt4mFWKFt\nhJawU0rw8nsoJQjZ2jjwolkVUlBt8uVo/XidWW1ecAu5Ov+rwDTeD4Lt3jaVmdbj\nRjyrb64YIe1Yx+U2ABQidIimq06mocH7HCzEhGQfDNQOaUtXsV7/t+6UpDazsRA8\ny1/pLoS5RA8ZbZAj/irP290ahxrFUKCVNr51MhCHmguBplYEDjoae3SHZ4+Ni8Yd\nuNWwkjjPR8UUMjZXzTJBSjv3JMb1+94uUmQCDROHv9YxwCix5JOwd9s2SVPx0QIH\nsZv2GbX5ifnX2dYFeme5pyrjXKo1j5YEwjjWqB/WKQKBgQDdqOMc+MQHpYHEuLQM\nTnc25OQInkSRgH8QQl64rjK5T6oqc2Rf1LU7bi2E+Uwnu+UFXNF7L4M+wzHgEKM9\nCpRTa6fqp9saJ3ZbUg4rxugBQ8alEnMch8fXDqy1iK2X47zF/ZwDTw9aZOPupBAC\ncNheGkFZZFO2VJh/MZFkGPWP3wKBgQDZB6SR/yLfaJ5pt4OOErRNiYDlGmhMUdGX\nCg1sXhCu4ZYu6EEU3+ZiRKlzkZLd7c3cFzsXS7/3GLKkztQEpNX20jFzF3hrpC5D\nNhRZmuePdCEt7GmTO5/xvnLIYtUe5dFoQohOoKVyP9Pemq0CLLvNaKG4ZoQasbHe\nyXTnglOCXQKBgAXBqxRHiZ/BNpuLSHHBX+s3Co0GvzUgJyye7KLTM1IItZygnoy2\nk3ZVqCz55HZrtMjs3iva0gfBPfxZskOVkMCR3SyE63XEbJh2ixOr+L5/qhsDXaXy\nCMiXAvk78XYuXequaWzUksuAL0M1U40crSHUgLn3lwz3KXa0LNhypX31AoGANWK8\n57Dj6iK4/PZIZRVSxtPxIeoaB9QEg2vUm3iUEACrycQV5kWhTUDokeYYQ4Ewp1gL\nkBJxGR45K3M5Eh9eBoXz5gS6+Xd8bcoKvXPuTApb8wj5e18qW/PmFkbBeAU+OrBL\nCVRY/j6XJmXT8voABGodhdep3UsintPdbulPE30CgYBmwkIDSIYZkuxRwrVk/IMF\nUu6lja7jh9a+xGTja2TyLAWB0hlj6opYUqFzXi54huHuIsLL75VYVdRgUFwM78GO\ngG0fnLv65+McVsfLTCyTeACIbFiIKxQB+O6Hwo4VpYjLv53EOXs8Q8KDhuQbw82o\nSbA2HlPXbuPmJ3UHfPYppQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "googlecloud-api-xjismailbox@gcloud-nlp-runner-233703.iam.gserviceaccount.com",
+  "client_id": "104107119876329095477",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googlecloud-api-xjismailbox%40gcloud-nlp-runner-233703.iam.gserviceaccount.com"
+}
