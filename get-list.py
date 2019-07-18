@@ -34,7 +34,7 @@ class Worker(Process):
 
 
 cookie_string = '''
-s2_csrf_cookie_name=3f76537f806c00f9b6b717ce1169e299; PHPSESSID=hidgom5jit67v896poaj0m63u0; sw=126.3; s2_uGoo=f27eb4af32aedc7d9b0195e2163429348523e070; s2_csrf_cookie_name=3f76537f806c00f9b6b717ce1169e299; sh=28.1
+PHPSESSID=hidgom5jit67v896poaj0m63u0; sw=126.3; s2_csrf_cookie_name=0fa0f38a123822cb8c65b078ed3680dc; sh=41.7; s2_uGoo=37c73a802e4f68396adbd7d0a0c8f2c53f9b222b; s2_csrf_cookie_name=0fa0f38a123822cb8c65b078ed3680dc
 '''
 
 # 处理cookie字符串
@@ -59,7 +59,7 @@ headers = {
 lock = Lock()
 controller = ipchanger.init()
 worklist = []
-for pagenum in range(270, 318, 15):
+for pagenum in range(331, 416, 15):
     ipchanger.change_ip(controller)
 
     for ticker in range(1, 16):
