@@ -22,7 +22,7 @@ def download_list(url, headers, cookies):
 
 class Worker(Process):
     def __init__(self, url, headers, cookies):
-        Process.__init__()
+        Process.__init__(self)
         self.url = url
         self.headers = headers
         self.cookies = cookies
