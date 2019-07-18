@@ -36,6 +36,7 @@ class Worker(Process):
 cookie_string = '''
 s2_csrf_cookie_name=3f76537f806c00f9b6b717ce1169e299; PHPSESSID=hidgom5jit67v896poaj0m63u0; sw=126.3; s2_uGoo=f27eb4af32aedc7d9b0195e2163429348523e070; s2_csrf_cookie_name=3f76537f806c00f9b6b717ce1169e299; sh=28.1
 '''
+
 # 处理cookie字符串
 cookie_processor = cookies.SimpleCookie()
 cookie_processor.load(cookie_string)
