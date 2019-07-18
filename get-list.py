@@ -59,7 +59,7 @@ headers = {
 lock = Lock()
 controller = ipchanger.init()
 worklist = []
-for pagenum in range(113, 318, 15):
+for pagenum in range(270, 318, 15):
     ipchanger.change_ip(controller)
 
     for ticker in range(1, 16):
