@@ -1,7 +1,34 @@
 import requests
 from http import cookies
 import re
-import changer
+import ipchanger
+from multiprocessing.dummy import Process, Lock
+
+
+def download_list(url, headers, cookies):
+    res = requests.get(url,  headers=headers, cookies=cookies)
+    content = res.text
+
+    trs = re.find_all('<tr >')
+    lock.acquire()
+    if len(trs) == 50:
+        with open('page-%04d.txt' % pagenum, 'w', encoding='utf-8') as fp:
+            fp.write()
+        console.info('%04d' % pagenum)
+    else:
+        print('ERROR %04d' % (pagenum))
+    lock.release()
+
+
+class Worker(Process):
+    def __init__(self, url, headers, cookies):
+        Process.__init__()
+        self.url = url
+        self.headers = headers
+        self.cookies = cookies
+
+    def run(self):
+        download_list(self.url, self.headers, self.cookies)
 
 
 cookie_string = '''
@@ -26,22 +53,20 @@ headers = {
 }
 
 
-ticker = 1
-for pagenum in range(1, 301):
-    ticker += 1
-    if ticker == 19:
-        ticker = 0
-        changer.change_ip()
+lock = Lock()
+controller = ipchanger.init()
+worklist = []
+for pagenum in range(113, 318, 15):
+    ipchanger.change_ip(controller)
 
-    url = 'https://myip.ms/ajax_table/sites/%d/ipID/23.227.38.0/ipIDii/23.227.38.255/sort/6/asc/1' % (
-        pagenum)
+    for ticker in range(1, 16):
+        url = 'https://myip.ms/ajax_table/sites/%d/ipID/23.227.38.0/ipIDii/23.227.38.255/sort/6/asc/1' % (
+            pagenum+ticker)
 
-    res = requests.get(url,  headers=headers, cookies=cookies)
-    content = res.text
+        w = Worker(url,  headers=headers, cookies=cookies)
+        worklist.append(w)
 
-    trs = re.find_all('<tr >')
-    if len(trs) == 50:
-        with open('page-%04d.txt' % pagenum, 'w', encoding='utf-8') as fp:
-            fp.write()
-    else:
-        print('ERROR %04d' % (pagenum))
+    [w.start() for w in worklist]
+    [w.join() for w in worklist]
+    worklist.clear()
+
