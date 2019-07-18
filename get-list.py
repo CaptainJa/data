@@ -6,7 +6,7 @@ from multiprocessing.dummy import Process, Lock
 import console
 
 
-def download_list(url, headers, cookies):
+def download_list(url, headers, cookies, pagenum):
     res = requests.get(url,  headers=headers, cookies=cookies)
     content = res.text
 
@@ -22,14 +22,15 @@ def download_list(url, headers, cookies):
 
 
 class Worker(Process):
-    def __init__(self, url, headers, cookies):
+    def __init__(self, url, headers, cookies, pagenum):
         Process.__init__(self)
         self.url = url
         self.headers = headers
         self.cookies = cookies
+        self.pagenum = pagenum
 
     def run(self):
-        download_list(self.url, self.headers, self.cookies)
+        download_list(self.url, self.headers, self.cookies, self.pagenum)
 
 
 cookie_string = '''
@@ -64,7 +65,8 @@ for pagenum in range(113, 318, 15):
         url = 'https://myip.ms/ajax_table/sites/%d/ipID/23.227.38.0/ipIDii/23.227.38.255/sort/6/asc/1' % (
             pagenum+ticker)
 
-        w = Worker(url,  headers=headers, cookies=cookies)
+        w = Worker(url,  headers=headers, cookies=cookies,
+                   pagenum=pagenum+ticker)
         worklist.append(w)
 
     [w.start() for w in worklist]
