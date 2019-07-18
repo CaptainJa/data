@@ -13,7 +13,7 @@ def download_list(url, headers, cookies):
     lock.acquire()
     if len(trs) == 50:
         with open('page-%04d.txt' % pagenum, 'w', encoding='utf-8') as fp:
-            fp.write()
+            fp.write(content)
         console.info('%04d' % pagenum)
     else:
         print('ERROR %04d' % (pagenum))
