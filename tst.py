@@ -9,7 +9,7 @@ def download_list(url, headers, cookies):
     res = requests.get(url,  headers=headers, cookies=cookies)
     content = res.text
 
-    trs = re.find_all('<tr >')
+    trs = re.findall('<tr >', content)
     lock.acquire()
     if len(trs) == 50:
         with open('page-%04d.txt' % pagenum, 'w', encoding='utf-8') as fp:
@@ -69,4 +69,3 @@ for pagenum in range(113, 318, 15):
     [w.start() for w in worklist]
     [w.join() for w in worklist]
     worklist.clear()
-
